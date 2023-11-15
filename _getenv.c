@@ -4,19 +4,24 @@
  * _myenv - the current environment prints
  * @info: potential argument that maintain cons function prototype
  * _getenv - gets environ variable value
- * @name: env var name
+ * populate_env_list - linked list populates
  * _mysetenv - Initialize a new environment variable or modify it
  * _myunsetenv - Remove an environment variable
- * populate_env_list - linked list populates
+ * @name: env var name
  * Return: Always 0
  */
- 
+
 int _myenv(info_t *info)
-{
+}
 	print_list_str(info->env);
 	return (0);
 }
-
+/**
+ * @info: potential argument that maintain cons function prototype
+ * _getenv - gets environ variable value
+ * @name: env var name
+ * Return:null
+ */
 char *_getenv(info_t *info, const char *name)
 {
 	list_t *node = info->env;
@@ -30,6 +35,7 @@ char *_getenv(info_t *info, const char *name)
 		node = node->next;
 	}
 	return (NULL);
+}
 
 int _mysetenv(info_t *info)
 {
@@ -42,7 +48,6 @@ int _mysetenv(info_t *info)
 		return (0);
 	return (1);
 }
-
 int _myunsetenv(info_t *info)
 {
 	int i;
@@ -57,7 +62,6 @@ int _myunsetenv(info_t *info)
 
 	return (0);
 }
-
 int populate_env_list(info_t *info)
 {
 	list_t *node = NULL;
