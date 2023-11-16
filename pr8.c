@@ -75,7 +75,6 @@ int print_alias(list_t *node)
         }
         return (1);
 }
-}
 /**
  * _myalias - mimics alias builtin
  * @info: Structure containing potential arguments.
